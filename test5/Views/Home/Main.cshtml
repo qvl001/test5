@@ -1,0 +1,187 @@
+﻿@model List<Test5.Models.list4Result>
+
+@{
+    ViewBag.Title = "Main";
+    var User = (Test5.Models.User)Session["User"];
+}
+
+<header>
+    <div>
+        <button type="button" class="btn btn-primary mybAdd" id="mybAdd">ფესვის დამატება</button>
+        <button type="button" class="btn btn-primary mybCAdd" id="mybCAdd">შვილის დამატება</button>
+        <button type="button" class="btn btn-primary mybED" id="mybED">რედაქტირება</button>
+        <button type="button" class="btn btn-primary mybDel" id="mybDel">წაშლა</button>
+    </div>
+    <div><span>საწყისი თარიღი: </span><input id="SawT" type="date" /></div>
+    <div><span>საბოლოო თარიღი: </span><input id="SabT" type="date" /></div>
+    <button type="button" class="btn btn-primary mybDel" id="DateB">დროის ფილტრი</button>
+</header>
+
+
+
+
+<h2>Main</h2>
+
+@*fesvis damatebis fotmaaaaa-------------------------------------------------------------------*@
+
+<div class="AddForm">
+    <div class="AddH">დამატების ფორმა<span class="glyphicon glyphicon-remove"></span></div>
+    <div class="zeda">
+        <div class="zeda0">
+            <div>
+                <span>სახეობა:</span><select id="saxeoba">
+                    <option value="ფინანსური">ფინანსური</option>
+                    <option value="სასაქონლო">სასაქონლო</option>
+                    <option value="ორგანიზაციის">ორგანიზაციის</option>
+                    <option value="თანამშრომლის">თანამშრომლის</option>
+                    <option value="ბანკის">ბანკის</option>
+                </select>
+            </div>
+            <div><span>ანგარიში:</span><input type="text" id="angarishi" placeholder="ანგარიში"></div>
+            <div>
+                <span>ტიპი:</span><select id="tipi">
+                    <option value="აქტ">აქტ</option>
+                    <option value="პას">პას</option>
+                    <option value="ა/პ გაშლილი">ა/პ გაშლილი</option>
+                    <option value="ა/პ შეკუმშული">ა/პ შეკუმშული</option>
+                    <option value="ა/პ ბალანსგარეშე">ა/პ ბალანსგარეშე</option>
+                </select>
+            </div>
+            <div><span>დასახელება:</span><input type="text" id="dasaxeleba" placeholder="დასახელება"></div>
+        </div>
+        <div class="zeda2">
+            <div class="checkbox">
+                <label><input type="checkbox" id="gadaf">გადაფასებადი</label>
+            </div>
+        </div>
+    </div>
+    <div class="qveda">
+        <header>ფინანსური</header><header>ექვივალენტი</header>
+        <div><span>დებეტი:</span><input type="text" id="findeb"><input type="text" id="eqdeb"></div>
+        <div><span>კრედიტი:</span><input type="text" id="finkred"><input type="text" id="eqkred"></div>
+        <div><span>ვალუტა:</span><select id="finval">
+                <option value="GEL">GEL</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+            <input type="text" id="eqval"></div>
+    </div>
+    <button type="button" class="btn btn-success" id="AddBut">დამატება</button>
+</div>
+
+
+@*shvilis damatebis forma--------------------------------------------------------------------------------*@
+
+<div class="AddCForm">
+    <div class="AddH">დამატების ფორმა<span class="glyphicon glyphicon-remove"></span></div>
+    <div class="zeda">
+        <div class="zeda0">
+            <div>
+                <span>სახეობა:</span><select id="Csaxeoba">
+                    <option value="ფინანსური">ფინანსური</option>
+                    <option value="სასაქონლო">სასაქონლო</option>
+                    <option value="ორგანიზაციის">ორგანიზაციის</option>
+                    <option value="თანამშრომლის">თანამშრომლის</option>
+                    <option value="ბანკის">ბანკის</option>
+                </select>
+            </div>
+            <div><span>ანგარიში:</span><input type="text" id="Cangarishi" placeholder="ანგარიში"></div>
+            <div>
+                <span>ტიპი:</span><select id="Ctipi">
+                    <option value="აქტ">აქტ</option>
+                    <option value="პას">პას</option>
+                    <option value="ა/პ გაშლილი">ა/პ გაშლილი</option>
+                    <option value="ა/პ შეკუმშული">ა/პ შეკუმშული</option>
+                    <option value="ა/პ ბალანსგარეშე">ა/პ ბალანსგარეშე</option>
+                </select>
+            </div>
+            <div><span>დასახელება:</span><input type="text" id="Cdasaxeleba" placeholder="დასახელება"></div>
+        </div>
+        <div class="zeda2">
+            <div class="checkbox">
+                <label><input type="checkbox" id="Cgadaf">გადაფასებადი</label>
+            </div>
+        </div>
+    </div>
+    <div class="qveda">
+        <header>ფინანსური</header><header>ექვივალენტი</header>
+        <div><span>დებეტი:</span><input type="text" id="Cfindeb"><input type="text" id="eqdeb"></div>
+        <div><span>კრედიტი:</span><input type="text" id="Cfinkred"><input type="text" id="eqkred"></div>
+        <div><span>ვალუტა:</span><select id="Cfinval">
+            <option value="GEL">GEL</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+        </select><input type="text" id="eqval"></div>
+    </div>
+    <button type="button" class="btn btn-success" id="CAddBut">დამატება</button>
+</div>
+
+@*regaqtirebis forma==================================================================================*@
+
+<div class="RedForm">
+    <div class="AddH">დამატების ფორმა<span class="glyphicon glyphicon-remove"></span></div>
+    <div class="zeda">
+        <div class="zeda0">
+            <div>
+                <span>სახეობა:</span><select id="Rsaxeoba">
+                    <option value="ფინანსური">ფინანსური</option>
+                    <option value="სასაქონლო">სასაქონლო</option>
+                    <option value="ორგანიზაციის">ორგანიზაციის</option>
+                    <option value="თანამშრომლის">თანამშრომლის</option>
+                    <option value="ბანკის">ბანკის</option>
+                </select>
+            </div>
+            <div><span>ანგარიში:</span><input type="text" id="Rangarishi" placeholder="ანგარიში"></div>
+            <div>
+                <span>ტიპი:</span><select id="Rtipi">
+                    <option value="აქტ">აქტ</option>
+                    <option value="პას">პას</option>
+                    <option value="ა/პ გაშლილი">ა/პ გაშლილი</option>
+                    <option value="ა/პ შეკუმშული">ა/პ შეკუმშული</option>
+                    <option value="ა/პ ბალანსგარეშე">ა/პ ბალანსგარეშე</option>
+                </select>
+            </div>
+            <div><span>დასახელება:</span><input type="text" id="Rdasaxeleba" placeholder="დასახელება"></div>
+        </div>
+        <div class="zeda2">
+            <div class="checkbox">
+                <label><input type="checkbox" id="Rgadaf">გადაფასებადი</label>
+            </div>
+        </div>
+    </div>
+    <div class="qveda">
+        <header>ფინანსური</header><header>ექვივალენტი</header>
+        <div><span>დებეტი:</span><input type="text" id="Rfindeb"><input type="text" id="eqdeb"></div>
+        <div><span>კრედიტი:</span><input type="text" id="Rfinkred"><input type="text" id="eqkred"></div>
+        <div>
+            <span>ვალუტა:</span><select id="Rfinval">
+                <option value="GEL">GEL</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select><input type="text" id="eqval">
+        </div>
+    </div>
+    <button type="button" class="btn btn-success" id="RedBut">დამატება</button>
+</div>
+
+@*========================================================================================*@
+
+<div class="pop_back"></div>
+
+<table class="SasNash">
+    <thead>
+        <tr>
+            <td>ანგარიშის ნომერი</td>
+            <td>ანგარიშის ტიპი</td>
+            <td>ანგარიშის დასახელება</td>
+            <td>გადაფასებადი</td>
+            <td>დებეტი</td>
+            <td>კრედიტი</td>
+            <td>ვალუტა</td>
+            <td class="hide"></td>
+            <td class="hide"></td>
+            <td class="hide"></td>
+        </tr>
+    </thead>
+    @TreeGrid.GetTreeView(Model, Convert.ToInt32(Model.FirstOrDefault().PID))
+</table>

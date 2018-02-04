@@ -1,0 +1,60 @@
+﻿@model List<Test5.Models.AngResult>
+
+@{
+    ViewBag.Title = "AngGeg";
+}
+<h2>AngGeg</h2>
+
+
+<table class="AngList">
+    <tr>
+        <th style="display:none;">
+            Id
+        </th>
+        <th style="display:none;">
+            PId
+        </th>
+        <th style="display:none;">
+            Done
+        </th>
+        <th>
+            AngNom
+        </th>
+        @*<th>
+                AngTip
+            </th>*@
+        <th>
+            AngDas
+        </th>
+    </tr>
+
+    @foreach (var j in Model)
+            {
+        <tr>
+            <td style="display:none;">
+                @j.ID
+            </td>
+            <td style="display:none;">
+                @j.PID
+            </td>
+            <td style="display:none;">
+                @j.DONE
+            </td>
+            <td>
+                @j.ANGNOM
+            </td>
+            @*<td>
+                    @j.ANGTIP
+                </td>*@
+            <td>
+                @j.ANDDAS
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+
+
+

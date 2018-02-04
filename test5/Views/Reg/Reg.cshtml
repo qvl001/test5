@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Reg";
+}
+
+<h2>Registration</h2>
+
+
+<form class="reg" action="Reg/Reg" method="post">
+    <div class="form-group">
+        <label for="email">მაილი:</label>
+        <input type="email" class="form-control" name="Mail" id="email">
+    </div>
+    <div class="form-group">
+        <label for="text">კომპანიის დასახელება:</label>
+        <input type="text" class="form-control" name="comp" id="corp">
+    </div>
+    <div class="form-group">
+        <label for="pwd">პაროლი:</label>
+        <input type="password" class="form-control" name="pwd" id="pwd">
+    </div>
+    @*<div class="form-group">
+        <label for="pwd">გაიმეორეთ პაროლი:</label>
+        <input type="password" class="form-control" id="pwd1">
+    </div>*@
+    <button type="submit" class="btn btn-default" id="RegSub">Submit</button>
+</form>

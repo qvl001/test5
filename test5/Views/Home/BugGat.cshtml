@@ -1,0 +1,224 @@
+﻿@model IEnumerable<Test5.Models._BugGatResult>
+
+@{
+    ViewBag.Title = "BugGat";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Content/JS/BugGat.js"></script>
+</head>
+<body>
+    <br />
+    <br />
+        @*damatebis formaaaaa-----------------------------------------------------------------------------*@
+
+        <button type="button" class="btn btn-primary" id="BugGatADD">დამატება</button>
+        <button type="button" class="btn btn-danger" id="BugGatDel">წაშლა</button>
+
+    <div class="pop_back"></div>
+
+
+    <div class="BugGatAdd">
+        <div class="AddH">დამატების ფორმა  <span class="glyphicon glyphicon-remove"></span></div>
+        <div><span>დოკუმენტის ნომერი: </span><input type="text" id="BugDokNom"><button type="button">დოკ. ტიპი</button><span>დაუკავშირე დოკ</span><button type="button">...</button></div>
+        <div><span>თარიღი: </span><input id="BugGatDate" type="date" /></div>
+        <div><span>პროექტი: </span><input id="Proeqti" type="text" /><button type="button">...</button></div>
+        <div><span>მემორიალი: </span><input id="Memoriali" type="number" /></div>
+        <div><span>სადებეტო ანგარიში: </span><input type="text" id="DebAng" /><button type="button" id="DebList">...</button></div>
+        <div><span>საკრედიტო ანგარიში: </span><input type="text" id="KredAng" /><button type="button" id="KredList">...</button></div>
+        <div>
+            <span>თანხა: </span><select id="saxeoba">
+                <option value="1">GEL</option>
+                <option value="2">USD</option>
+                <option value="3">EUR</option>
+            </select>
+        </div>
+        <div><span>საფუძველი: </span><textarea id="Safudzveli"></textarea><input type="checkbox" /></div>
+        <div><span>ანალიზური ველი: </span><input id="AnalizuriCheck" type="checkbox" /><input id="Analizuri" type="text" /><button>...</button></div>
+        <div><span>დადასტურებული: </span><input id="DadastCheck" type="checkbox" /><span>გადადებული: </span><input id="GadadebuliCheck" type="checkbox" /></div>
+        <button type="button" class="btn btn-success" id="AddBut">დამატება</button>
+    </div>
+
+
+
+
+    <div class="DebForm">
+        <div class="AddH">სადებეტო ანგარიში<span class="glyphicon glyphicon-remove XX"></span></div>
+        <table class="DebList">
+            <tr>
+                <th style="display:none;">
+                    Id
+                </th>
+                <th style="display:none;">
+                    PId
+                </th>
+                <th style="display:none;">
+                    Done
+                </th>
+                <th>
+                    AngNom
+                </th>
+                @*<th>
+                    AngTip
+                </th>*@
+                <th>
+                    AngDas
+                </th>
+            </tr>
+
+            @foreach (var j in ViewBag.ANG)
+            {
+                <tr>
+                    <td style="display:none;">
+                        @j.ID
+                    </td>
+                    <td style="display:none;">
+                        @j.PID
+                    </td>
+                    <td style="display:none;">
+                        @j.DONE
+                    </td>
+                    <td>
+                        @j.ANGNOM
+                    </td>
+                    @*<td>
+                        @j.ANGTIP
+                    </td>*@
+                    <td>
+                        @j.ANDDAS
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+
+
+
+
+
+    <div class="KredForm">
+        <div class="AddH">საკრედიტო ანგარიში<span class="glyphicon glyphicon-remove XX"></span></div>
+        <table class="KredList">
+            <tr>
+                <th style="display:none;">
+                    Id
+                </th>
+                <th style="display:none;">
+                    PId
+                </th>
+                <th style="display:none;">
+                    Done
+                </th>
+                <th>
+                    AngNom
+                </th>
+                @*<th>
+                    AngTip
+                </th>*@
+                <th>
+                    AngDas
+                </th>
+            </tr>
+
+            @foreach (var j in ViewBag.ANG)
+            {
+                <tr>
+                    <td style="display:none;">
+                        @j.ID
+                    </td>
+                    <td style="display:none;">
+                        @j.PID
+                    </td>
+                    <td style="display:none;">
+                        @j.DONE
+                    </td>
+                    <td>
+                        @j.ANGNOM
+                    </td>
+                    @*<td>
+                        @j.ANGTIP
+                    </td>*@
+                    <td>
+                        @j.ANDDAS
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+
+
+
+
+
+
+    <h2>BugGat</h2>
+    <table style="margin-left:auto;">
+        <tr>
+            <td>Id</td>
+            <td>დადასტუ რებული</td>
+            <td>გადადებული</td>
+            <td>დოკუმენტის ტიპი</td>
+            <td>დოკუმენტის ნომერი</td>
+            <td>თარიღი</td>
+            <td>დებეტი ანგარიში</td>
+            <td>დებეტი დასახელება</td>
+            <td>კრედიტი ანგარიში</td>
+            <td>კრედიტი დასახელება</td>
+            <td>თანხა</td>
+            <td>ვალუტა</td>
+            <td>კურსი</td>
+            <td>მემორიალი</td>
+            <td>საფუძველი</td>
+            <td>ანალიზური ველი</td>
+            <td>შესრულების თარიღი</td>
+            <td>შემსრუ ლებელი</td>
+        </tr>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>@i.Id </td>
+                <td>@i.Dadasturebuli</td>
+                <td>@i.Gadadebuli</td>
+                <td>@i.DokTipi</td>
+                <td>@i.DokNom</td>
+                <td>@i.ShesrulebisTarigi</td>
+                <td>@i.Debang</td>
+                <td>@i.DebDas</td>
+                <td>@i.kredang</td>
+                <td>@i.kreddas</td>
+                <td>@i.Tanxa</td>
+                <td>@i.Valuta</td>
+                <td>@i.Kursi</td>
+                <td>@i.Memoriali</td>
+                <td>@i.Safudzveli</td>
+                <td>@i.AnalizuriVeli</td>
+                <td>@i.ShesrulebisTarigi</td>
+                <td>@i.Shemsrulebeli</td>
+            </tr>
+        }
+    </table>
+
+
+
+
+
+
+    @*<div class="container body-content">
+        @RenderBody()
+    </div>*@
+
+</body>
+</html>

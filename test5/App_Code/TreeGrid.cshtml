@@ -1,0 +1,39 @@
+﻿@helper GetTreeView(List<Test5.Models.list4Result> Tree, int ParentId)
+{
+
+foreach (var i in Tree.Where(a => a.PID.Equals(ParentId)))
+{
+        <tr>
+            @{var submenu = Tree.Where(a => a.PID.Equals(i.ID)).Count();}
+            @if (submenu > 0)
+            {
+                <td><span class="glyphicon glyphicon-chevron-right"></span><span class="nnn">@i.ANGNOM</span></td>
+                <td>@i.ANGTIP</td>
+                <td>@i.ANDDAS</td>
+                <td>@i.GADAF</td>
+                <td>@i.Debeti </td>
+                <td>@i.krediti</td>
+                <td>@i.VALUTA</td>
+                <td class="hide">@i.DONE</td>
+                <td class="hide">@i.PID</td>
+                <td class="hide">@i.ID</td>
+
+                @TreeGrid.GetTreeView(Tree, Convert.ToInt32(i.ID));
+            }
+
+            @if (submenu == 0)
+            {
+                <td><span class="nnn">@i.ANGNOM</span></td>
+                <td>@i.ANGTIP</td>
+                <td>@i.ANDDAS</td>
+                <td>@i.GADAF</td>
+                <td>@i.Debeti </td>
+                <td>@i.krediti</td>
+                <td>@i.VALUTA</td>
+                <td class="hide">@i.DONE</td>
+                <td class="hide">@i.PID</td>
+                <td class="hide">@i.ID</td>
+            }
+        </tr>
+                }
+}

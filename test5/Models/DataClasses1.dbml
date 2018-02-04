@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="V5" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-5VK54K9\SQLEXPRESS;Initial Catalog=V5;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="V5ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Mail" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Company" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tarigi" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Pass" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="Dashveba" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="User_AngGeg" Member="AngGegs" ThisKey="Id" OtherKey="User" Type="AngGeg" />
+      <Association Name="User__SawyisiNaSti" Member="_SawyisiNaStis" ThisKey="Id" OtherKey="User" Type="_SawyisiNaSti" />
+      <Association Name="User__BugaltruliGatareba" Member="_BugaltruliGatarebas" ThisKey="Id" OtherKey="Shemsrulebeli" Type="_BugaltruliGatareba" />
+      <Association Name="dashveba_User" Member="dashveba1" ThisKey="Dashveba" OtherKey="Id" Type="dashveba" IsForeignKey="true" />
+      <Association Name="Company_User" Member="Company1" ThisKey="Company" OtherKey="Id" Type="Company" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dashveba" Member="dashvebas">
+    <Type Name="dashveba">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="dashveba_User" Member="Users" ThisKey="Id" OtherKey="Dashveba" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AngGeg" Member="AngGegs">
+    <Type Name="AngGeg">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DONE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ANGNOM" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ANDDAS" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ANGTIP" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="GADAF" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VALUTA" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Compani" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[User]" Member="User" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="AngGeg__SawyisiNaSti" Member="_SawyisiNaStis" ThisKey="ID" OtherKey="AngNom" Type="_SawyisiNaSti" />
+      <Association Name="AngGeg__BugaltruliGatareba" Member="_BugaltruliGatarebas" ThisKey="ID" OtherKey="DebAng" Type="_BugaltruliGatareba" />
+      <Association Name="AngGeg__BugaltruliGatareba1" Member="_BugaltruliGatarebas1" ThisKey="ID" OtherKey="KredAng" Type="_BugaltruliGatareba" />
+      <Association Name="User_AngGeg" Member="User1" ThisKey="User" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Company" Member="Companies">
+    <Type Name="Company">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Company" Member="Company1" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SasNashti" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Company_User" Member="Users" ThisKey="Id" OtherKey="Company" Type="User" />
+      <Association Name="Company__SawyisiNaSti" Member="_SawyisiNaStis" ThisKey="Id" OtherKey="Company" Type="_SawyisiNaSti" />
+      <Association Name="Company__BugaltruliGatareba" Member="_BugaltruliGatarebas" ThisKey="Id" OtherKey="company" Type="_BugaltruliGatareba" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[_SawyisiNaSti]" Member="_SawyisiNaStis">
+    <Type Name="_SawyisiNaSti">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AngNom" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Debeti" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Krediti" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SasNaStDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Company" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[User]" Member="User" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="AngGeg__SawyisiNaSti" Member="AngGeg" ThisKey="AngNom" OtherKey="ID" Type="AngGeg" IsForeignKey="true" />
+      <Association Name="Company__SawyisiNaSti" Member="Company1" ThisKey="Company" OtherKey="Id" Type="Company" IsForeignKey="true" />
+      <Association Name="User__SawyisiNaSti" Member="User1" ThisKey="User" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[_BugaltruliGatareba]" Member="_BugaltruliGatarebas">
+    <Type Name="_BugaltruliGatareba">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Dadasturebuli" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Gadadebuli" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DokTipi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DokNom" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tarigi" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="DebAng" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="KredAng" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Tanxa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Kursi" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Memoriali" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Safudzveli" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="AnalizuriVeli" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ShesrulebisTarigi" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="company" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Shemsrulebeli" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="AngGeg__BugaltruliGatareba" Member="AngGeg" ThisKey="DebAng" OtherKey="ID" Type="AngGeg" IsForeignKey="true" />
+      <Association Name="AngGeg__BugaltruliGatareba1" Member="AngGeg1" ThisKey="KredAng" OtherKey="ID" Type="AngGeg" IsForeignKey="true" />
+      <Association Name="Company__BugaltruliGatareba" Member="Company1" ThisKey="company" OtherKey="Id" Type="Company" IsForeignKey="true" />
+      <Association Name="User__BugaltruliGatareba" Member="User" ThisKey="Shemsrulebeli" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.[_SawN]" Method="_SawN">
+    <Parameter Name="SawT" Parameter="sawT" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SabT" Parameter="sabT" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Comp" Parameter="comp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="_SawNResult">
+      <Column Name="nashti" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.list4" Method="list4">
+    <Parameter Name="ID" Parameter="iD" Type="System.Int32" DbType="Int" />
+    <ElementType Name="list4Result">
+      <Column Name="ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DONE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ANGNOM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ANDDAS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ANGTIP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GADAF" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Debeti" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="krediti" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VALUTA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SasNaStDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Compani" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[User]" Member="User" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Ang" Method="Ang">
+    <Parameter Name="Com" Parameter="com" Type="System.Int32" DbType="Int" />
+    <ElementType Name="AngResult">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DONE" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ANGNOM" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ANDDAS" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.[_BugGat]" Method="_BugGat">
+    <Parameter Name="com" Type="System.Int32" DbType="Int" />
+    <ElementType Name="_BugGatResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Dadasturebuli" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Gadadebuli" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DokTipi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DokNom" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DokNom1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Debang" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DebDas" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="kredang" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="kreddas" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Tanxa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Valuta" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Kursi" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Memoriali" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Safudzveli" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="AnalizuriVeli" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ShesrulebisTarigi" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="company" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Shemsrulebeli" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

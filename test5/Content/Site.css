@@ -1,0 +1,525 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+header {
+    position:fixed;
+    width: 80%;
+    background-color:white;
+    padding-top:0;
+    margin-top:100px;
+    z-index:1000;
+}
+
+div{
+    margin-top:2px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*meniu ===================================================*/
+
+menu ul li {
+    display:inline-block;
+    text-decoration:none;
+    background-color:aquamarine;
+    float: left;
+    margin-right: 30px;
+}
+
+
+
+.forma{
+    height:300px;
+    width:200px;
+    border:3px solid black;
+
+}
+
+
+/*---sastarto nashti*/
+
+.SasNash{
+    margin-top:220px;
+    margin-left:5%;
+    width:90%;
+    border:1px solid black;
+}
+
+/*table{
+    margin:30px;
+    margin-left:5%;
+    width:90%;
+    border:1px solid black;
+}*/
+
+tr td{
+    border:1px solid black;
+}
+
+.done0{
+}
+
+.done1{
+    padding-left:30px;
+}
+
+.done2{
+    padding-left:60px;
+}
+
+.done3{
+    padding-left:90px;
+}
+
+.done4{
+    padding-left:120px;
+}
+
+.done5{
+    padding-left:150px;
+}
+
+.done6{
+    padding-left:180px;
+}
+
+
+.fdone0{
+padding-left:0px;
+}
+
+.fdone1{
+padding-left:0px;
+}
+
+.fdone2{
+padding-left:0px;
+}
+
+.fdone3{
+padding-left:0px;
+}
+
+.fdone4{
+padding-left:0px;
+}
+
+.fdone5{
+padding-left:0px;
+}
+
+.fdone6{
+padding-left:0px;
+}
+
+
+.list{
+    width:90%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size:16px;
+}
+.header {
+}
+
+.bbb{
+
+}
+
+.hide
+{
+    display:none;
+}
+
+.hide0
+{
+    display:none;
+}
+
+
+.hide1
+{
+    display:none;
+}
+
+.hide2
+{
+    display:none;
+}
+
+.hide3
+{
+    display:none;
+}
+
+.hide4
+{
+    display:none;
+}
+
+
+.pop_back 
+{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.7;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    cursor: pointer;
+    display: none;
+}
+
+.pop_box 
+{
+    position: absolute;
+    background: #fff;
+    height: auto;
+    padding: 0px 20px 20px 20px;
+    width: 30%;
+    top: 100px;
+    left: 35%;
+    z-index: 1500;
+    display: none;
+}        
+
+
+
+.add-child
+{
+    position: absolute;
+    background: #fff;
+    height: auto;
+    padding: 0px 20px 20px 20px;
+    width: 30%;
+    top: 100px;
+    left: 35%;
+    z-index: 1500;
+    display: none;
+}    
+
+
+.glyphicon-remove
+{
+    cursor:pointer;
+    float:right;
+    margin:20px;
+}
+
+.tavi
+{
+    margin-top:20px;
+    font-size:20px;
+    float:left;
+    margin-bottom:20px;
+}
+
+
+#add{
+    float:right;
+}
+
+
+.cl2
+{
+    float:right;
+    margin-right:10px;
+    cursor: pointer;
+}
+
+
+.cl1
+{
+    float:right;
+    margin-right:10px;
+    margin:20px;
+    cursor: pointer;
+}
+
+
+
+#open
+{
+    background-color:#8DA28D;
+    padding:10px 10px 10px 10px;
+    border-radius:7px;
+    margin: 10px 0px 10px 9%;
+    font-size:16px;
+    border:none;
+}
+
+
+#pop-detail
+{
+    position: absolute;
+    background: #fff;
+    height: auto;
+    padding: 0px 20px 20px 20px;
+    width: 30%;
+    top:100px;
+    left:35%;
+    z-index: 1500;
+    display: none;
+
+}
+
+
+#pop-update
+{
+     position: absolute;
+     background: #fff;
+     height: auto;
+     padding: 0px 20px 20px 20px;
+     width: 30%;
+     top:100px;
+     left:35%;
+     z-index: 1500;
+     display: none;
+
+}
+
+
+#selected {
+    background-color: brown;
+}
+
+
+.edit
+{
+    display:none;
+    z-index: 1500;
+    position: absolute;
+    background: #fff;
+    height: auto;
+    padding: 0px 20px 20px 20px;
+    width: 30%;
+    left:35%;
+    top:15%;
+}
+
+/*damarebis forma --------------------------------------------------------------------------------*/
+.AddForm
+{
+    display:none;
+    z-index: 1500;
+    position: absolute;
+    background: #fff;
+    height: 380px;
+    padding: 0px 20px 20px 20px;
+    width: 40%;
+    left:35%;
+    top:15%;
+    background-color: beige;
+    padding: 0px 0px 0px 0px;
+}
+
+.AddForm span {
+    margin-left: 15px;
+    display: inline-block;
+    width: 100px;
+}
+
+.AddForm header{
+    display:inline-block;
+    margin-left:27%;
+}
+
+.AddH{
+    margin:10px 10px 10px 20px;
+    width:100%;
+    font-size:25px;
+}
+
+.AddH span{
+    float: right;
+    margin-top:0px;
+    right:20px;
+}
+
+
+.zeda{
+    background-color:azure;
+    margin-top:0px;
+    height:130px;
+}
+
+
+.zeda0{
+    float:left;
+    margin-left:20px;
+}
+
+.zeda1{
+    margin-left:10px;
+    float:left;
+}
+
+
+.qveda{
+    width:100%;
+    background-color:antiquewhite;
+    height: 170px;
+}
+
+.qveda input{
+    margin-left:20px;
+}
+
+#AddBut{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+}
+/*Svilis damatebis forma*/
+
+
+
+.AddCForm {
+    display: none;
+    z-index: 1500;
+    position: absolute;
+    background: #fff;
+    height: 380px;
+    padding: 0px 20px 20px 20px;
+    width: 40%;
+    left: 35%;
+    top: 15%;
+    background-color: beige;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.AddCForm span {
+    margin-left: 15px;
+    display: inline-block;
+    width: 100px;
+}
+
+.AddCForm header{
+    display:inline-block;
+    margin-left:27%;
+}
+
+
+#CAddBut{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+}
+
+
+
+/*redaqtirebis formaaaa====================================================*/
+
+.RedForm {
+    display: none;
+    z-index: 1500;
+    position: absolute;
+    background: #fff;
+    height: 380px;
+    padding: 0px 20px 20px 20px;
+    width: 40%;
+    left: 35%;
+    top: 15%;
+    background-color: beige;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.RedForm span {
+    margin-left: 15px;
+    display: inline-block;
+    width: 100px;
+}
+
+.RedForm header{
+    display:inline-block;
+    margin-left:27%;
+}
+
+
+#RedBut{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+}
+
+
+/*bugaltruli gatarebaaaaaaaaaaaa ------------------------------------------------------------*/
+
+.BugGatAdd{    
+    display:none;
+    z-index: 1500;
+    position: absolute;
+    background: #fff;
+    height: 440px;
+    padding: 0px 20px 20px 20px;
+    width: 550px;
+    left:auto;
+    top:15%;
+    background-color: beige;
+    padding: 0px 0px 0px 0px;
+
+}
+
+.BugGatAdd span{
+    margin-left:15px;
+    display:inline-block;
+    width:200px;
+}
+
+
+.DebForm{
+    display:none;
+    position:absolute;
+    z-index: 2000;
+    margin-top:15%;
+    margin-left:50%;
+    height: 300px;
+    width: 400px;
+    background-color: beige;
+    overflow: scroll;
+}
+
+.DebAng{
+    margin:0px 0px 0px 0px; 
+    padding:0px 0px 0px 0px; 
+    width:100%;
+}
+
+
+.KredForm{
+    display:none;
+    position:absolute;
+    z-index: 2000;
+    margin-top:15%;
+    margin-left:50%;
+    height: 300px;
+    width: 400px;
+    background-color: beige;
+    overflow: scroll;
+}
+
+.KredAng{
+    margin:0px 0px 0px 0px; 
+    padding:0px 0px 0px 0px; 
+    width:100%;
+}
+
+

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.625, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="f3bc1aba-7e21-4999-847d-1a1359df9bb8" absoluteBounds="3.5, 3.75, 2, 1.8702722167968755">
+      <DataClassMoniker Name="/DataClasses1DataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c2e2d24-2bab-49f6-b498-804ce23101e0" absoluteBounds="3.515, 4.21, 1.9700000000000002, 1.310272216796875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b6662de8-292b-456c-a766-7b4ab61c13be" absoluteBounds="0.75, 1.125, 2, 1.1506270345052085">
+      <DataClassMoniker Name="/DataClasses1DataContext/dashveba" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d6220b0-347e-44bc-900d-f3067c51c290" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.59062703450520826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="83bcb763-f0d7-4e7b-9729-3176e472ebcb" absoluteBounds="6.25, 3.375, 2, 2.5899173990885416">
+      <DataClassMoniker Name="/DataClasses1DataContext/AngGeg" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d9fb7fd9-9676-46ac-a114-6732ca8bc54a" absoluteBounds="6.265, 3.835, 1.9700000000000002, 2.0299173990885415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e3b6afdb-41f8-481f-ad78-aa3bf2c9059e" absoluteBounds="0.75, 3.875, 2, 1.5104496256510416">
+      <DataClassMoniker Name="/DataClasses1DataContext/Company" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ec80dae5-a187-4a23-964d-0bd151767f62" absoluteBounds="0.765, 4.335, 1.9700000000000002, 0.95044962565104174" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="56131d65-8f4c-4dcc-97ee-da4b1083fff4" absoluteBounds="9, 3.625, 2, 2.0501835123697916">
+      <DataClassMoniker Name="/DataClasses1DataContext/_SawyisiNaSti" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a4893d5b-1db4-4224-b1c8-11cc99ffd04b" absoluteBounds="9.015, 4.085, 1.9700000000000002, 1.4901835123697915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.7003135172526); (4.5 : 1.7003135172526); (4.5 : 3.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/dashveba/dashveba_User" />
+      <nodes>
+        <classShapeMoniker Id="b6662de8-292b-456c-a766-7b4ab61c13be" />
+        <classShapeMoniker Id="f3bc1aba-7e21-4999-847d-1a1359df9bb8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.68513610839844); (6.25 : 4.68513610839844)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/User/User_AngGeg" />
+      <nodes>
+        <classShapeMoniker Id="f3bc1aba-7e21-4999-847d-1a1359df9bb8" />
+        <classShapeMoniker Id="83bcb763-f0d7-4e7b-9729-3176e472ebcb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.63022481282552); (3.5 : 4.63022481282552)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/Company/Company_User" />
+      <nodes>
+        <classShapeMoniker Id="e3b6afdb-41f8-481f-ad78-aa3bf2c9059e" />
+        <classShapeMoniker Id="f3bc1aba-7e21-4999-847d-1a1359df9bb8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 4.6500917561849); (9 : 4.6500917561849)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/AngGeg/AngGeg__SawyisiNaSti" />
+      <nodes>
+        <classShapeMoniker Id="83bcb763-f0d7-4e7b-9729-3176e472ebcb" />
+        <classShapeMoniker Id="56131d65-8f4c-4dcc-97ee-da4b1083fff4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.22136040641276); (3.25 : 4.22136040641276); (3.25 : 3.125); (5.91666666666667 : 3.125 : JumpStart); (6.08333333333333 : 3.125 : JumpEnd); (10 : 3.125); (10 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/Company/Company__SawyisiNaSti" />
+      <nodes>
+        <classShapeMoniker Id="e3b6afdb-41f8-481f-ad78-aa3bf2c9059e" />
+        <classShapeMoniker Id="56131d65-8f4c-4dcc-97ee-da4b1083fff4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.18631605419922); (6 : 4.18631605419922); (6 : 2.875); (10 : 2.875); (10 : 3.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/User/User__SawyisiNaSti" />
+      <nodes>
+        <classShapeMoniker Id="f3bc1aba-7e21-4999-847d-1a1359df9bb8" />
+        <classShapeMoniker Id="56131d65-8f4c-4dcc-97ee-da4b1083fff4" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1793195e-e68e-4c68-9058-0c8b755ef869" absoluteBounds="11.375, 2.75, 2, 3.6693851725260416">
+      <DataClassMoniker Name="/DataClasses1DataContext/_BugaltruliGatareba" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c593cd5d-9527-48a2-9fc5-385683d65931" absoluteBounds="11.39, 3.21, 1.9700000000000002, 3.1093851725260415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.25 : 5.85130045572917); (11.375 : 5.85130045572917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/AngGeg/AngGeg__BugaltruliGatareba" />
+      <nodes>
+        <classShapeMoniker Id="83bcb763-f0d7-4e7b-9729-3176e472ebcb" />
+        <classShapeMoniker Id="1793195e-e68e-4c68-9058-0c8b755ef869" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 3.46875); (9.91666666666667 : 3.46875 : JumpStart); (10.0833333333333 : 3.46875 : JumpEnd); (11.375 : 3.46875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/AngGeg/AngGeg__BugaltruliGatareba1" />
+      <nodes>
+        <classShapeMoniker Id="83bcb763-f0d7-4e7b-9729-3176e472ebcb" />
+        <classShapeMoniker Id="1793195e-e68e-4c68-9058-0c8b755ef869" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 5.38544962565104); (1.75 : 6.22340128580729); (11.375 : 6.22340128580729)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/Company/Company__BugaltruliGatareba" />
+      <nodes>
+        <classShapeMoniker Id="e3b6afdb-41f8-481f-ad78-aa3bf2c9059e" />
+        <classShapeMoniker Id="1793195e-e68e-4c68-9058-0c8b755ef869" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 5.62027221679688); (4.5 : 6.09415684244792); (11.375 : 6.09415684244792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClasses1DataContext/User/User__BugaltruliGatareba" />
+      <nodes>
+        <classShapeMoniker Id="f3bc1aba-7e21-4999-847d-1a1359df9bb8" />
+        <classShapeMoniker Id="1793195e-e68e-4c68-9058-0c8b755ef869" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
